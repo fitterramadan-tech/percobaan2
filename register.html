@@ -1,19 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daftar — Simple Health</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="login-body">
-    <div class="login-card">
-        <h2>Daftar Akun</h2>
-        <input type="text" id="regUser" placeholder="Username">
-        <input type="password" id="regPass" placeholder="Password">
-        <button onclick="register()">Daftar</button>
-        <p class="info">Sudah punya akun? <a href="index.html">Masuk</a></p>
+<body class="auth-body">
+  <div class="auth-card">
+    <h1>Buat Akun</h1>
+    <input id="regUser" placeholder="Username" />
+    <input id="regPass" type="password" placeholder="Password" />
+    <input id="regPass2" type="password" placeholder="Konfirmasi Password" />
+    <div class="row">
+      <button id="btnRegister">Daftar</button>
+      <button id="btnToLogin" class="ghost">Kembali</button>
     </div>
-    <script src="script.js"></script>
+    <small class="muted">Akun disimpan lokal (localStorage).</small>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
