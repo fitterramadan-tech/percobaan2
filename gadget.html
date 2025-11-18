@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top-bar">
+    <h1>Waktu Gadget</h1>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+</div>
+
+<div id="sideMenu" class="side-menu hidden">
+    <a href="home.html">Beranda</a>
+    <a href="health.html">Cek Kesehatan</a>
+    <a href="history.html">History</a>
+    <a href="changepass.html">Ganti Password</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+</div>
+
+<div class="content">
+    <h2>Waktu Penggunaan Gadget</h2>
+    <input type="number" id="menit" placeholder="Berapa menit per hari?">
+    <button onclick="cekGadget()">Cek</button>
+    <p id="peringatan"></p>
+</div>
+<script src="script.js"></script>
+</body>
+      </html>
