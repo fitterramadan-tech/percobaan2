@@ -1,31 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gadget</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gadget — Simple Health</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="top-bar">
-    <h1>Waktu Gadget</h1>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-</div>
+  <div class="top-bar">
+    <h2>Waktu Gadget</h2>
+    <button class="hamburger" id="hamburger3">☰</button>
+  </div>
 
-<div id="sideMenu" class="side-menu hidden">
+  <aside id="menu3" class="side-menu hidden">
+    <div class="menu-header">Menu</div>
     <a href="home.html">Beranda</a>
     <a href="health.html">Cek Kesehatan</a>
     <a href="history.html">History</a>
     <a href="changepass.html">Ganti Password</a>
-    <a href="index.html" onclick="logout()">Logout</a>
-</div>
+    <a href="#" id="logoutLink3">Logout</a>
+  </aside>
 
-<div class="content">
-    <h2>Waktu Penggunaan Gadget</h2>
-    <input type="number" id="menit" placeholder="Berapa menit per hari?">
-    <button onclick="cekGadget()">Cek</button>
-    <p id="peringatan"></p>
-</div>
-<script src="script.js"></script>
+  <main class="main">
+    <section class="card">
+      <label>Berapa menit bermain per hari?</label>
+      <input id="menit" type="number" />
+      <label>Batas aman (menit)</label>
+      <input id="threshold" type="number" value="120" />
+      <div class="row"><button id="btnGadget">Cek</button></div>
+      <div id="hasilGadget" class="result"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-      </html>
+</html>
