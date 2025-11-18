@@ -1,32 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ganti Password</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ganti Password — Simple Health</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="top-bar">
-    <h1>Ganti Password</h1>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-</div>
+  <div class="top-bar">
+    <h2>Ganti Password</h2>
+    <button class="hamburger" id="hamburger5">☰</button>
+  </div>
 
-<div id="sideMenu" class="side-menu hidden">
+  <aside id="menu5" class="side-menu hidden">
+    <div class="menu-header">Menu</div>
     <a href="home.html">Beranda</a>
     <a href="health.html">Cek Kesehatan</a>
     <a href="gadget.html">Pemakaian Gadget</a>
     <a href="history.html">History</a>
-    <a href="index.html" onclick="logout()">Logout</a>
-</div>
+    <a href="#" id="logoutLink5">Logout</a>
+  </aside>
 
-<div class="content">
-    <h2>Ubah Password</h2>
-    <input type="password" id="oldPass" placeholder="Password Lama">
-    <input type="password" id="newPass" placeholder="Password Baru">
-    <button onclick="gantiPassword()">Ubah</button>
-    <p id="msg"></p>
-</div>
-<script src="script.js"></script>
+  <main class="main">
+    <section class="card">
+      <label>Password Lama</label>
+      <input id="oldPass" type="password" />
+      <label>Password Baru</label>
+      <input id="newPass" type="password" />
+      <div class="row">
+        <button id="btnChangePass">Ubah</button>
+      </div>
+      <div id="msgPass"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-</html>
+          </html>
