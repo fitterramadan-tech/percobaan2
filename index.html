@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Health App — Login</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="auth-body">
-  <div class="auth-card">
-    <h1>Simple Health</h1>
-    <input id="username" placeholder="Username" />
-    <input id="password" type="password" placeholder="Password" />
-    <div class="row">
-      <button id="btnLogin">Masuk</button>
-      <button id="btnToRegister" class="ghost">Daftar</button>
-    </div>
-    <small class="muted">Data disimpan lokal. Jangan gunakan data sensitif.</small>
-  </div>
-  <script src="script.js"></script>
+<body>
+
+<div class="auth-container">
+    <h2>Login</h2>
+    <input id="loginUser" type="text" placeholder="Username">
+    <input id="loginPass" type="password" placeholder="Password">
+    <button onclick="login()">Masuk</button>
+
+    <p>Belum punya akun? <a href="register.html">Daftar</a></p>
+</div>
+
+<script src="auth.js"></script>
 </body>
 </html>
