@@ -1,87 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Health App</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="container">
-    <header>
-      <h1>Simple Health App</h1>
-      <nav>
-        <a href="#home" id="nav-home">Home</a>
-        <a href="history.html" id="nav-history">History</a>
-      </nav>
-    </header>
-
-    <section id="account-section" class="card">
-      <h2>1. Tautkan Akun / Ganti Password</h2>
-      <div class="form-row">
-        <label>Username</label>
-        <input id="username" placeholder="nama pengguna" />
-      </div>
-      <div class="form-row">
-        <label>Password</label>
-        <input id="password" type="password" placeholder="password" />
-      </div>
-      <div class="buttons">
-        <button id="btn-link">Tautkan / Simpan Akun</button>
-        <button id="btn-change">Ganti Password</button>
-      </div>
-      <p class="muted">Akun disimpan di browser (localStorage). Jangan gunakan data sensitif.</p>
-    </section>
-
-    <section id="health-section" class="card">
-      <h2>2. Cek Kesehatan</h2>
-      <div class="form-row">
-        <label>Umur (tahun)</label>
-        <input id="age" type="number" min="0" />
-      </div>
-      <div class="form-row">
-        <label>Tinggi (cm)</label>
-        <input id="height" type="number" min="0" />
-      </div>
-      <div class="form-row">
-        <label>Berat (kg)</label>
-        <input id="weight" type="number" min="0" />
-      </div>
-      <div class="form-row checkboxes">
-        <label><input type="checkbox" id="fatigue" /> Cepat lelah</label>
-        <label><input type="checkbox" id="anger" /> Gampang marah</label>
-        <label><input type="checkbox" id="sick" /> Gampang sakit</label>
-      </div>
-      <div class="buttons">
-        <button id="btn-check-health">Periksa Kesehatan</button>
-        <button id="btn-save-entry">Simpan ke History</button>
-      </div>
-
-      <div id="health-result" class="result"></div>
-    </section>
-
-    <section id="gadget-section" class="card">
-      <h2>3. Pemakaian Gadget</h2>
-      <div class="form-row">
-        <label>Berapa lama main gadget per hari?</label>
-        <input id="gadget-minutes" type="number" min="0" placeholder="menit" />
-      </div>
-      <div class="form-row">
-        <label>Batas aman (menit)</label>
-        <input id="gadget-threshold" type="number" min="0" value="120" />
-      </div>
-      <div class="buttons">
-        <button id="btn-check-gadget">Periksa Pemakaian</button>
-      </div>
-      <div id="gadget-result" class="result"></div>
-    </section>
-
-    <footer>
-      <p>SimpleHealthApp — dibuat tanpa library eksternal.</p>
-    </footer>
-  </main>
-
-  <script src="script.js"></script>
+<body class="login-body">
+    <div class="login-card">
+        <h2>Masuk Akun</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p class="info">Belum punya akun? <a href="register.html">Daftar</a></p>
+    </div>
+    <script src="script.js"></script>
 </body>
-            </html>
-
+</html>
