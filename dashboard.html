@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <h2>Dashboard</h2>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <a onclick="showPage('health')">Cek Kesehatan</a>
+    <a onclick="showPage('gadget')">Cek Gadget</a>
+    <a onclick="showPage('history')">History</a>
+    <a onclick="logout()">Logout</a>
+</div>
+
+<div class="page" id="health" style="display:block;">
+    <h3>Cek Kesehatan</h3>
+    <input id="age" type="number" placeholder="Umur">
+    <input id="height" type="number" placeholder="Tinggi Badan (cm)">
+    <input id="weight" type="number" placeholder="Berat Badan (kg)">
+
+    <label><input type="checkbox" id="lelah"> Mudah Lelah</label><br>
+    <label><input type="checkbox" id="marah"> Gampang Marah</label><br>
+    <label><input type="checkbox" id="sakit"> Gampang Sakit</label><br><br>
+
+    <button onclick="checkHealth()">Cek</button>
+
+    <p id="healthResult"></p>
+</div>
+
+<div class="page" id="gadget">
+    <h3>Cek Waktu Gadget</h3>
+    <input id="gadgetTime" type="number" placeholder="Jam penggunaan gadget">
+
+    <button onclick="checkGadget()">Cek</button>
+
+    <p id="gadgetResult"></p>
+</div>
+
+<div class="page" id="history">
+    <h3>History</h3>
+    <ul id="historyList"></ul>
+</div>
+
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+      </html>
