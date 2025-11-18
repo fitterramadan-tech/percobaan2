@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>History - Simple Health App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>History</h1>
+      <nav>
+        <a href="index.html">Kembali</a>
+      </nav>
+    </header>
+    <section class="card">
+      <h2>Riwayat Cek Kesehatan</h2>
+      <div id="history-list">Memuat...</div>
+      <div style="margin-top:10px">
+        <button id="btn-clear" class="secondary">Hapus Semua History</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    const list = document.getElementById('history-list');
+    function render(){
+      const arr = (window.opener && window.opener._sha) ? window.opener._sha.getHistory() : JSON.parse(localStorage.getItem('sha_history') || '[]');
+      if(!arr.length){ list.innerHTML = '<p>Tidak ada data.</p>'; return; }
+      const items = arr.slice().reverse().map(e=>{
+        const d = new Date(e.date);
+        return `<div style="padding:8px;border-bottom:1px dashed #eee">
+          <div><strong>${d.toLocaleString()}</strong></div>
+          <div>Umur: ${e.age} | Tinggi: ${e.height} cm | Berat: ${e.weight} kg | BMI: ${e.bmi.toFixed(2)}</div>
+          <div>Gadget: ${e.gadgetMinutes} menit</div>
+        </div>`;
+      }).join('');
+      list.innerHTML = items;
+    }
+    document.getElementById('btn-clear').addEventListener('click', ()=>{
+      if(confirm('Hapus semua history?')){ localStorage.removeItem('sha_history'); render(); }
+    });
+    render();
+  </script>
+</body>
+</html>
